@@ -46,20 +46,4 @@ fun ToDoAppTheme(
 
         }
     }
-
-    val typography = TodoAppTypography(
-        largeTitle = TextStyle(
-            fontSize = when (textSize) {
-                TodoAppSize.Small -> 32.sp
-                TodoAppSize.Large -> 38.sp
-            }
-        ),
-        title = TextStyle(
-            fontSize = when (textSize) {
-                TodoAppSize.Small -> 20.sp
-                TodoAppSize.Large -> 32.sp
-            }
-        ),
-        button = TextStyle
-    )
 }
