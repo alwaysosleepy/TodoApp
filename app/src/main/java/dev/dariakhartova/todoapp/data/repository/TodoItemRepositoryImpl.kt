@@ -22,7 +22,7 @@ class TodoItemRepositoryImpl: TodoItemRepository {
     }
 
     override suspend fun updateTodoItem(todo: TodoItem) {
-        TODO("Not yet implemented")
+        TODO()
     }
 
 

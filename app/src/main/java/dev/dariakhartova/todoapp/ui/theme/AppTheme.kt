@@ -33,7 +33,7 @@ private val lightColorScheme = AppColorScheme(
     separator = Color(0x33000000),
     overlay = Color(0x0F000000),
     primaryBackground = Color(0xFFF7F6F2),
-    labelPrimary = Color(0x00000000),
+    labelPrimary = Color(0xFF000000),
     secondaryBackground = Color(0xFFFFFFFF),
     labelSecondary = Color(0x99000000),
     labelTertiary = Color(0x4D000000),
@@ -50,7 +50,7 @@ private val lightColorScheme = AppColorScheme(
 private fun typography(colorScheme: AppColorScheme): AppTypography {
     return AppTypography(
         largeTitle = TextStyle(
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Medium,
             fontFamily = FontFamily.Default,
             fontSize = 32.sp,
             lineHeight = 38.sp,
@@ -58,7 +58,7 @@ private fun typography(colorScheme: AppColorScheme): AppTypography {
             color = colorScheme.labelPrimary
         ),
         title = TextStyle(
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Medium,
             fontFamily = FontFamily.Default,
             fontSize = 20.sp,
             lineHeight = 32.sp,
@@ -66,12 +66,12 @@ private fun typography(colorScheme: AppColorScheme): AppTypography {
             color = colorScheme.labelPrimary
         ),
         button = TextStyle(
-            fontWeight = FontWeight.Normal,
+            fontWeight = FontWeight.Medium,
             fontFamily = FontFamily.Default,
             fontSize = 14.sp,
             lineHeight = 24.sp,
             letterSpacing = 0.16.sp,
-            color =colorScheme.labelPrimary
+            color = colorScheme.labelPrimary
         ),
         body = TextStyle(
             fontWeight = FontWeight.Normal,
