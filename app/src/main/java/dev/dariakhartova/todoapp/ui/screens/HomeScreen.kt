@@ -35,6 +35,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dev.dariakhartova.todoapp.data.model.TodoItem
+import dev.dariakhartova.todoapp.ui.theme.AppTheme
 
 @Composable
 fun EntryScreen(modifier: Modifier = Modifier) {
@@ -89,13 +90,18 @@ fun TaskScreen(
         Column(modifier = Modifier
             .fillMaxWidth()
             .background(Color.LightGray)
-            .padding(start = 48.dp, bottom = 16.dp, top = 48.dp)){
+            .padding(start = 48.dp, bottom = 16.dp, top = 48.dp))
+        {
+            val style = AppTheme.typography.largeTitle
             Text(
                 text = "Мои дела",
                 modifier = Modifier.padding(top = 48.dp),
-                color = MaterialTheme.colorScheme.onBackground,
+                style = style
+                /*color = AppTheme.colorScheme.labelPrimary,
                 fontWeight = FontWeight.Bold,
                 fontSize = 32.sp
+
+                 */
             )
             Text(
                 text = "Выполнено — 5"

@@ -4,8 +4,8 @@ import androidx.annotation.StringRes
 import dev.dariakhartova.todoapp.R
 
 
-enum class Priority(@StringRes val priorityRes: Int){
-    HIGH (R.string.priority_high),
-    ORDINARY(R.string.priority_ordinary),
-    LOW(R.string.priority_low)
+enum class Priority(val value: String){
+    HIGH ("priority_high"),
+    ORDINARY("priority_ordinary"),
+    LOW("priority_low")
 }
