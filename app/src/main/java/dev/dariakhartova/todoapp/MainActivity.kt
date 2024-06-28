@@ -13,14 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dev.dariakhartova.todoapp.ui.screens.EntryScreen
 import dev.dariakhartova.todoapp.ui.screens.TaskScreen
-import dev.dariakhartova.todoapp.ui.theme.ToDoAppTheme
+import dev.dariakhartova.todoapp.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ToDoAppTheme {
+            AppTheme {
                 EntryScreen()
             }
         }

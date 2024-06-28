@@ -3,4 +3,12 @@
     <string name="priority_high">Высокая</string>
     <string name="priority_ordinary">Обычная</string>
     <string name="priority_low">Низкая</string>
+    <string name="todos_title">Мои дела</string>>
+    <string name="todos_title_done">Выполнено — 7</string>
+    <string name="error_toast_text">Произошла ошибка</string>
+    <string name="save_button_text">Сохранить</string>
+    <string name="description_text">Что надо сделать…</string>
+    <string name="priority_title">Важность</string>
+    <string name="delete_text">Удалить</string>
+    <string name="deadline_text">Сделать до</string>
 </resources>
