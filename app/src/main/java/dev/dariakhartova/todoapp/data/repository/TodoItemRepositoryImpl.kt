@@ -1,16 +1,17 @@
 package dev.dariakhartova.todoapp.data.repository
 
 import dev.dariakhartova.todoapp.data.model.TodoItem
-import dev.dariakhartova.todoapp.data.model.Priority
+import dev.dariakhartova.todoapp.data.model.Importance
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
+/**  Implementation for [TodoItemRepository] */
 class TodoItemRepositoryImpl: TodoItemRepository {
 
-    private val todoItemList = getTodoList()
+    private val todoItemList = getTodoItemsMock()
 
     override suspend fun getAllTodoItems(): Flow<List<TodoItem>> = flow {
-        emit(getTodoList())
+        emit(getTodoItemsMock())
     }
 
     override suspend fun addTodoItem(todo: TodoItem){
@@ -22,16 +23,22 @@ class TodoItemRepositoryImpl: TodoItemRepository {
     }
 
     override suspend fun updateTodoItem(todo: TodoItem) {
-        TODO("Not yet implemented")
+        TODO()
+    }
+
+    private fun getTodoItemList(): List<TodoItem> {
+        return listOf(
+
+        )
     }
 
 
-    private fun getTodoList(): List<TodoItem>{
+    private fun getTodoItemsMock(): List<TodoItem>{
         return listOf(
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.LOW,
+                importance = Importance.LOW,
                 isDone = true
             ),
             TodoItem(
@@ -43,56 +50,56 @@ class TodoItemRepositoryImpl: TodoItemRepository {
                         "Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст " +
                         "Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст " +
                         "Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст ",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = true
             ),
             TodoItem(
                 id = "1",
                 description = "Захватить мир",
-                priority = Priority.HIGH,
+                importance = Importance.HIGH,
                 isDone = true
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Купить что-то",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Пожить",
-                priority = Priority.LOW,
+                importance = Importance.LOW,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Длинный текст Длинный текст Длинный текст Длинный текст " +
                         "Длинный текст Длинный текст Длинный текст",
-                priority = Priority.LOW,
+                importance = Importance.LOW,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.HIGH,
+                importance = Importance.HIGH,
                 isDone = true
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.HIGH,
+                importance = Importance.HIGH,
                 isDone = true
             ),
             TodoItem(
@@ -101,19 +108,19 @@ class TodoItemRepositoryImpl: TodoItemRepository {
                         "Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст " +
                         "Длинный текст Длинный текст Длинный текст Длинный текст Длинный текст " +
                         "Длинный текст Длинный текст Длинный текст Длинный текст",
-                priority = Priority.LOW,
+                importance = Importance.LOW,
                 isDone = false
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = true
             ),
             TodoItem(
                 id = "1",
                 description = "Сделать что-то",
-                priority = Priority.ORDINARY,
+                importance = Importance.ORDINARY,
                 isDone = true
             )
 
