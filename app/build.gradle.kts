@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
+    alias(libs.plugins.kapt)
 }
 
 android {
@@ -78,4 +80,19 @@ dependencies {
     //Coroutines
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
+
+    //ktor-client
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.android)
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.client.logging)
+    implementation(libs.ktor.client.contentNegotiation)
+    implementation(libs.ktor.client.json)
+
+    //Serialization
+    implementation(libs.kotlinx.serialization.json)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 }

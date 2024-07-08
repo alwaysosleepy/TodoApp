@@ -1,19 +1,27 @@
 [versions]
 agp = "8.5.0"
+chLogbackClassic = "1.2.3"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 kotlinxCoroutinesCore = "1.7.3"
-lifecycleRuntimeKtx = "2.8.2"
+kotlinxSerializationJson = "1.5.1"
+ktorClientAndroid = "2.3.12"
+ktorClientCore = "2.3.12"
+ktorClientSerializationVersion = "2.3.12"
+lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
-composeBom = "2024.04.01"
+composeBom = "2024.06.00"
 material = "1.6.8"
 navigationCompose = "2.7.7"
 protoliteWellKnownTypes = "18.0.0"
-lifecycleRuntimeComposeAndroid = "2.8.2"
+lifecycleRuntimeComposeAndroid = "2.8.3"
 constraintlayoutCompose = "1.0.1"
+ktor = "2.3.12"
+hiltVersion = "2.46.1"
+kaptVersion = "2.0.0-RC1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,11 +43,27 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+logback-classic-v123 = { module = "ch.qos.logback:logback-classic", version.ref = "chLogbackClassic" }
 protolite-well-known-types = { group = "com.google.firebase", name = "protolite-well-known-types", version.ref = "protoliteWellKnownTypes" }
 androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
 androidx-constraintlayout-compose = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
+ktor-ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor"}
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor"}
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor"}
+ktor-client-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor"}
+
+hilt-android = {module = "com.google.dagger:hilt-android", version.ref = "hiltVersion"}
+hilt-android-compiler = {module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion"}
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion" }
 

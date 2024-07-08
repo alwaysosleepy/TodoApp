@@ -13,11 +13,13 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+/** Home Screen state */
 data class State(
     val todoList: List<TodoItem>,
     val isError: Boolean = false
 )
 
+/** ViewModel for Home Screen */
 class HomeViewModel(private val repository: TodoItemRepository = TodoItemRepositoryImpl()) :
     ViewModel() {
     private val _state: MutableStateFlow<State> = MutableStateFlow(State(emptyList()))
@@ -37,12 +39,11 @@ class HomeViewModel(private val repository: TodoItemRepository = TodoItemReposit
         }
     }
 
-    fun onSnackBarShown(){
+    fun onSnackBarShown() {
         viewModelScope.launch {
             _state.update { currentState ->
                 currentState.copy(isError = false)
             }
         }
     }
-
 }
