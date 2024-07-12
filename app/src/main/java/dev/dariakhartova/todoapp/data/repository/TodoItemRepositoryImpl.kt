@@ -1,12 +1,18 @@
 package dev.dariakhartova.todoapp.data.repository
 
+import android.app.Application
 import dev.dariakhartova.todoapp.data.model.TodoItem
 import dev.dariakhartova.todoapp.data.model.Importance
+import dev.dariakhartova.todoapp.local.database.dao.TodoDatabase
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 /**  Implementation for [TodoItemRepository] */
-class TodoItemRepositoryImpl: TodoItemRepository {
+class TodoItemRepositoryImpl(
+    //application: Application
+): TodoItemRepository {
+
+    //rivate val todoListDao = TodoDatabase.getInstance(application).todoListDao()
 
     private val todoItemList = getTodoItemsMock()
 
@@ -15,10 +21,10 @@ class TodoItemRepositoryImpl: TodoItemRepository {
     }
 
     override suspend fun addTodoItem(todo: TodoItem){
-        TODO()
+       // todoListDao.addTodoItem()
     }
 
-    override suspend fun deleteTodoItem(todo: TodoItem){
+    override suspend fun deleteTodoItem(todoItemId: TodoItem){
         TODO()
     }
 

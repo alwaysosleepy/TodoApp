@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 /** Home Screen state */
-data class State(
+data class HomeState(
     val todoList: List<TodoItem>,
     val isError: Boolean = false
 )
@@ -22,7 +22,7 @@ data class State(
 /** ViewModel for Home Screen */
 class HomeViewModel(private val repository: TodoItemRepository = TodoItemRepositoryImpl()) :
     ViewModel() {
-    private val _state: MutableStateFlow<State> = MutableStateFlow(State(emptyList()))
+    private val _state: MutableStateFlow<HomeState> = MutableStateFlow(HomeState(emptyList()))
     val state = _state.asStateFlow()
 
     init {

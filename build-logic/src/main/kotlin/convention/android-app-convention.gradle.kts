@@ -1,22 +1,8 @@
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.jetbrains.kotlin.serialization)
-    alias(libs.plugins.kapt)
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.ksp)
-    id("tg-plugin")
-}
+package convention
 
-tgReporter {
-    token.set(providers.environmentVariable("TG_TOKEN"))
-    chatId.set(providers.environmentVariable("CHAT_ID"))
-    maxApkSize.set(20)
-    enableSizeValidation.set(true)
-    enableContentAnalysis.set(true)
-}
+import org.gradle.accessors.dm.LibrariesForLibs
 
-android {
+/*configur<LibrariesForLibs> {
     namespace = "dev.dariakhartova.todoapp"
     compileSdk = 34
 
@@ -30,16 +16,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
-        }
-    }
-
-    applicationVariants.all {
-        outputs.all {
-            val output = this as com.android.build.gradle.api.ApkVariantOutput
-            val variantName = name
-            val versionCode = versionCode
-
-            outputFileName = "todolist-${variantName}-${versionCode}.apk"
         }
     }
 
@@ -101,7 +77,6 @@ dependencies {
     //Coroutines
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
 
     //ktor-client
     implementation(libs.ktor.client.core)
@@ -111,11 +86,6 @@ dependencies {
     implementation(libs.ktor.client.contentNegotiation)
     implementation(libs.ktor.client.json)
 
-    //Room
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    ksp(libs.androidx.room.compiler)
-
     //Serialization
     implementation(libs.kotlinx.serialization.json)
 
@@ -123,3 +93,6 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
 }
+
+ */
+
