@@ -2,16 +2,17 @@ package dev.dariakhartova.todoapp.data.model
 
 import java.time.LocalDate
 
-
+/** Implementation of model for UI */
 data class TodoItem(
     val id: String,
     val description: String,
-    val priority: Priority,
+    val importance: Importance,
     val isDone: Boolean,
-    val added: LocalDate? = null,
-    val update: LocalDate? = null,
+    val createdAt: LocalDate? = null,
+    val changedAt: LocalDate? = null,
     val deadline: LocalDate? = null
 )
+
 
 
 
