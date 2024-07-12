@@ -38,7 +38,7 @@ import dev.dariakhartova.todoapp.ui.theme.AppTheme
 import kotlinx.coroutines.delay
 
 @Composable
-fun EntryScreen() {
+fun HomeScreen() {
     val navController = rememberNavController()
 
     NavHost(startDestination = "task_list", navController = navController) {

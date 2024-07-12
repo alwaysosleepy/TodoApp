@@ -1,3 +1,8 @@
 package dev.dariakhartova.todoapp.ui.screens
 
-//Will be implemented later:[
+data class TaskDetailState(
+    val taskText: String?,
+    val isDone: Boolean
+)
+
+class TaskDetailViewModel
